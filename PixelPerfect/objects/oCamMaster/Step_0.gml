@@ -3,8 +3,7 @@
 
 camera_set_view_angle(cam,0.5);
 
-if (instance_exists(follow))
-{
+if (instance_exists(follow)){
 	xTo = follow.x;
 	yTo = follow.y;
 }
@@ -16,13 +15,11 @@ if (instance_exists(follow))
 
 //checks the parameters for z_out in oPlayers step event, and if z_out is false
 //	then zoom level only registers zooming in (getting smaller) if true it runs as normal
-if oPlayer.z_out = false
-	{
-		zoom_level = zoom_level + oPlayer._keyZoom_in	
-	}else 
-		{
-		zoom_level = clamp(zoom_level + (((oPlayer._keyZoom_out - oPlayer._keyZoom_in)) * 0.1), 0.2, 3);
-		}
+if oPlayer.z_out = false{
+	zoom_level = zoom_level + oPlayer._keyZoom_in	
+}else{
+	zoom_level = clamp(zoom_level + (((oPlayer._keyZoom_out - oPlayer._keyZoom_in)) * 0.1), 0.2, 3);
+}
 
 //Get current size
 var view_w = camera_get_view_width(cam);
