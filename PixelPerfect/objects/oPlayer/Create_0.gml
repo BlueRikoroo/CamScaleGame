@@ -1,4 +1,3 @@
-
 //shauns built in creation code to handle movement and states, with an addition of jumpcount from me
 
 hSpeed = 0;

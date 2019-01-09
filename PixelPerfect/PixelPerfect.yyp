@@ -34,7 +34,7 @@
             "Key": "11403c9b-b0ae-4ff6-8d05-8ec547082084",
             "Value": {
                 "id": "2d51c2b6-8976-410f-8579-83f1998caa9d",
-                "resourcePath": "sprites\\WorldBloc\\WorldBloc.yy",
+                "resourcePath": "sprites\\sMask_32x32_center\\sMask_32x32_center.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -60,6 +60,14 @@
                 "id": "627e621d-8959-4ae4-905e-01fd0b104856",
                 "resourcePath": "views\\3173d78f-edcb-4ea7-8a31-7f73235756df.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "39153a9b-85e8-4b0a-ad1e-f1519eeae39b",
+            "Value": {
+                "id": "f298d33b-a7b1-4398-a31e-acc27afb26c8",
+                "resourcePath": "scripts\\scaleObject\\scaleObject.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -191,6 +199,14 @@
             }
         },
         {
+            "Key": "94d31496-b505-4e55-b7f6-c89452b16746",
+            "Value": {
+                "id": "031aad19-5224-43a2-9b5b-1e852c799cd0",
+                "resourcePath": "scripts\\tryScaleObject\\tryScaleObject.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9f6c1f51-9c59-432c-bc10-cda2823df077",
             "Value": {
                 "id": "bf2be91a-e46a-486d-ae73-0413de2e1473",
@@ -272,7 +288,9 @@
         }
     ],
     "script_order": [
-        "58c26c7a-c16b-400d-906e-f74c8d8db00f"
+        "58c26c7a-c16b-400d-906e-f74c8d8db00f",
+        "39153a9b-85e8-4b0a-ad1e-f1519eeae39b",
+        "94d31496-b505-4e55-b7f6-c89452b16746"
     ],
     "tutorial": ""
 }

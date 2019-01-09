@@ -8,9 +8,6 @@ _keyDown = keyboard_check(ord("S"));
 _keyJump = keyboard_check_pressed(vk_space);
 _keyJump_release = keyboard_check_released((vk_space));
 
-_keyZoom_in = keyboard_check_pressed(vk_add) || mouse_check_button_pressed(mb_left);
-_keyZoom_out = keyboard_check_pressed(vk_subtract) || mouse_check_button_pressed(mb_right);
-
 
 
 //speed_difference = lerp()
@@ -120,69 +117,3 @@ if (place_meeting(x-1,y,oWall)) && (place_meeting(x+1,y,oWall))
 		{
 			z_out = true;
 		}
-
-//Prevent getting stuck in a wall with size changes
-
-if (place_meeting(x,y,oWall))
-{
-	for (var i = 0; i < 1000; ++i;)
-	{
-		//Checking where the last place we were free was and then moving to there
-	 	//right
-			if (!place_meeting(x + i, y, oWall))
-				{
-					x += i;
-					break;
-				}
-		//left
-					if (!place_meeting(x - i, y, oWall))
-				{
-					x -= i;
-					break;
-				}
-		//up
-					if (!place_meeting(x, y - i, oWall))
-				{
-					y -= i;
-					break;
-				}
-		//down
-					if (!place_meeting(x, y + i, oWall))
-				{
-					y += i-2;
-					break;
-				}
-		//top right
-							if (!place_meeting(x + i, y - i, oWall))
-				{
-					x += i;
-					y -= i;
-					break;
-				}
-		//top left
-									if (!place_meeting(x - i, y - i, oWall))
-				{
-					x -= i;
-					y -= i;
-					break;
-				}
-		//bottom right
-									if (!place_meeting(x + i, y + i, oWall))
-				{
-					x += i;
-					y += i;
-					break;
-				}
-		//bottom left
-									if (!place_meeting(x - i, y + i, oWall))
-				{
-					x -= i;
-					y += i;
-					break;
-				}
-	}
-}
-
-//changes the characters size based on the zoom level variable in the oCamMaster object
-image_xscale = oCamMaster.zoom_level
-image_yscale = oCamMaster.zoom_level

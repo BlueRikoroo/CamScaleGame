@@ -6,12 +6,13 @@ view_h_half = camera_get_view_height(cam) * 0.5;
 xTo = xstart;
 yTo = ystart;
 
-zoom_level = 1;
 
 //Get the starting view size to be used for interpolation later
-default_zoom_width = camera_get_view_width(cam);
-default_zoom_height = camera_get_view_height(cam);
+default_zoom_width = 540 //Smallest size it can be
+default_zoom_height = 360
 
-
-
-//zoom_target = oPlayer;
+//Zoom is the scaler to use for zooming
+zoomMin = 1
+zoomMax = 5
+zoomCurrent = (zoomMax+zoomMin)*0.5
+zoomRate = 0.05
