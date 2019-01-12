@@ -8,8 +8,15 @@ _keyDown = keyboard_check(ord("S"));
 _keyJump = keyboard_check_pressed(vk_space);
 _keyJump_release = keyboard_check_released((vk_space));
 
-
-
+o = instance_create_layer(x,y-64,layer,oScribe)
+//If player sprite is centered at bottom already
+with(oScribe){
+     if y-16 < other.y+1{
+        mask_index = noone     
+     }else{
+        mask_index = sMask_32x32_center     //Centered at top left
+     }
+}
 //speed_difference = lerp()
 
 
